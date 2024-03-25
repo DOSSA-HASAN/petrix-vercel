@@ -48,61 +48,18 @@ window.addEventListener('resize', () => {
     updateStyles();
 });
 
+let scrollDown = document.getElementById('scrollButton');
+scrollDown.addEventListener('click', ()=>{
+    let nextSection = document.querySelector("#section01:not([hidden])").nextElementSibling;
+    if(nextSection){
+        nextSection.scrollIntoView({behavior: "smooth"})
+    }
+})
 
-
-
-
-
-
-
-
-
-
-
-// if(linkVisibility == true){
-//     menuButton.addEventListener('click', ()=>{
-
-        
-//     })
-
-// } else if(linkVisibility == false){
-//     mainSect.forEach((elem)=>{
-//         elem.style.paddingTop = '0'
-//         elem.style.height = '0'
-//         elem.style.display = 'none'
-//     })
-
-//     allLinks.forEach((link)=>{
-//         link.style.display = 'none'
-//     })
-// }
-
-
-// menuButton.addEventListener('click', ()=>{
-    
-//     mainSect.forEach((elem)=>{
-//             if(linkVisibility){
-//                 linkVisibility = !linkVisibility;
-//                 elem.style.paddingTop = '10px'
-//                 elem.style.height = 'max-content'
-//                 elem.style.flexDirection = 'column'
-
-//                 allLinks.forEach((link)=>{
-//                     link.style.display = 'block'
-//                 })
-//             } else{
-//                 linkVisibility = true;
-//                 elem.style.paddingTop = ''
-//                 elem.style.height = ''
-//                 elem.style.flexDirection = ''
-
-//                 allLinks.forEach((link)=>{
-//                     link.style.display = ''
-//                 })
-//             }
-            
-//         })
-    
-        
-//     }
-// )
+let scrollTop = document.getElementById('scrollTopButton');
+scrollTop.addEventListener('click', ()=>{
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    })
+})

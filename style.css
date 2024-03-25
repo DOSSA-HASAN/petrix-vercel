@@ -11,6 +11,42 @@ section, article, main{
 }
 */
 
+@keyframes scrollRightToLeft{
+    0%{transform: translateX(100%);}
+
+    /* 50%{transform: translateX(0%);} */
+
+    100%{transform: translateX(0%);}
+
+
+}
+
+.marquee{
+    animation: scrollRightToLeft 20s ease infinite;
+    display: flex;
+    align-items: center;
+    background-color: #010101;
+    /* padding: 400px 0; */
+    overflow: hidden;
+    background-color: transparent;
+}
+
+.bg-black{
+    background-color: #000;
+    overflow: hidden;
+}
+
+.bg-orange{
+    background-color: #ea552b;
+    overflow: hidden;
+    padding: 20px 0;
+    white-space: nowrap;
+}
+
+.bg-orange>div{
+    padding: 0;
+    margin: 0;
+}
 
 body{
     background-color: red;
@@ -49,6 +85,7 @@ header{
     position: fixed;
     width: 97%;
     left: 1.5%;
+    z-index: 10;
 }
 
 
@@ -112,7 +149,7 @@ header main div img{
     /* background-position-y: -100px; */
     background-position: center;
     background-size: contain;
-    z-index: -5;
+    z-index: -9;
     background-color: #e6eaf6;
     padding: 150px 1.5%;
     height: 70vh;
@@ -216,18 +253,18 @@ article div p{
     overflow: hidden;
 }
 
-.about-cont h2{
+.about-cont h2, .marquee h2{
     /* width: 200px; */
     white-space: nowrap;
 }
 
-.about-cont .solid-text{
+.solid-text{
     color: #fff;
     font-size: 40px;
     margin: 0 25px;
 }
 
-.about-cont .transparent-text{
+.transparent-text{
     -webkit-text-stroke: 1px #fff;
     color: transparent;
     font-size: 40px;
@@ -358,11 +395,11 @@ article div p{
     padding: 10px;
 }
 
-#section03 .about-cont{
+/* #section03 .about-cont{
     padding: 60px 0; 
     background: #ea552b; 
     margin: 50px 0 100px 0;
-}
+} */
 
 
 #section03 .about-cont .solid-text{
@@ -376,7 +413,7 @@ article div p{
     color: transparent;
     font-size: 30px;
     font-family: Arial, Helvetica, sans-serif;
-}
+} 
 
 #section03 .achievements ul{
     display: flex;
@@ -821,12 +858,10 @@ article div p{
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 50px 0;
+    /* margin: 50px 0; */
+    padding: 50px 0;
 }
 
-#section08 .about-cont{
-    background-color: #ea552b;
-}
 
 #section09{
     background-color: #010101;
